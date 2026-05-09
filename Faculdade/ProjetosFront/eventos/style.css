@@ -1,0 +1,6 @@
+#meuBotao{
+    color: aqua;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}

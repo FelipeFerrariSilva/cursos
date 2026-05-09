@@ -1,0 +1,27 @@
+name: "Build and Test"
+on:
+  pull_request:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    name: "Build and Test"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Clonar o Repositorio"
+        uses: actions/checkout@v4
+
+      - name: "Configurar o Java"
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '22'
+          cache: 'maven'
+
+      - name: "Compilar o projeto"
+        run: mvn clean compile
+
+      - name: "Executar os testes"
+        run: mvn test

@@ -1,0 +1,21 @@
+DEVOPS
+deploy provisionar
+devops cultura
+devsecops segurança
+finops gerenciamento de custo
+gitops fonte de verdade
+ser confiabilidade atributo das funções acima
+git e versionador
+CI/CD - entrega continua
+statefull
+state
+bainsmile
+cluster/cluesterelização
+IaC - infraestrutura versionada em código
+
+FERRAMENTAS BASICAS
+Git
+Terraform - Provisiona nas nuvens infra a instacia
+Ansible - Configura e prepara a infra
+Docker e Kubernetes - Containers 
+Grafana, Graylog e Datadog

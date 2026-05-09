@@ -1,0 +1,43 @@
+C:\Program Files\Common Files\Oracle\Java\javapath
+
+C:\Program Files\Java\jdk-15.0.2
+
+
+@Test
+    public void deveTestarUmaSenhaNula(){
+        String senha;
+        boolean resultadoSenhaVazia = ValidarSenha.validarSenha(senha = "");
+        boolean resultadoSenhaNull = ValidarSenha.validarSenha(senha = null);
+
+        assertThat(resultadoSenhaVazia).isFalse();
+        assertThat(resultadoSenhaNull).isFalse();
+    }
+
+    @Test
+    public void deveTestarSenhaComDiferentesTamanhos(){
+        boolean resultadoSenhaCurta = ValidarSenha.validarSenha("1qa");
+        boolean resultadoSenhaLonga = ValidarSenha.validarSenha("1qakasielnawor");
+
+        assertThat(resultadoSenhaCurta).isFalse();
+        assertThat(resultadoSenhaLonga).isFalse();
+    }
+
+    @Test
+    public void deveTestarSenhaComCaracteresForaDoPadrao(){
+        boolean resultadoSemMaiuscula = ValidarSenha.validarSenha("abc123abc");
+        boolean resultadoSemNumero = ValidarSenha.validarSenha("abcBVlojd");
+
+        assertThat(resultadoSemMaiuscula).isFalse();
+        assertThat(resultadoSemNumero).isFalse();
+    }
+
+    @Test
+    public void deveTestarUmaSenhaValida(){
+        boolean resultadoEsperado = ValidarSenha.validarSenha("ABC123lo");
+        boolean resultadoTamanhoMinimo = ValidarSenha.validarSenha("123ABC");
+        boolean resultadoTamanhoMaximo = ValidarSenha.validarSenha("123ABC456oiu");
+
+        assertThat(resultadoEsperado).isTrue();
+        assertThat(resultadoTamanhoMinimo).isTrue();
+        assertThat(resultadoTamanhoMaximo).isTrue();
+    }

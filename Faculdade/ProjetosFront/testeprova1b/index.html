@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+        <h1>DIGITE SEU NOME</h1>
+        <input type="text" id="nome" >
+        <h1>DIGITE SEU CPF</h1>
+        <input type="text" id="cpf" placeholder="000.000.000-00">
+        <h1>ESCOLHA UM CORTE</h1>
+        <select id="tipo" size="3">
+            <option id="corte" onclick="corte()">Corte de Cabelo</option>
+            <option id="cortebarba" onclick="cortebarba()">Corte + Barba</option>
+            <option id="barba" onclick="barba()">Barba</option>
+          </select>
+          <h1>DATA DO AGENDAMENTO</h1>
+        <input type="date" id="data">
+        <h1>ATENDIMENTO QUINZENAL?</h1>
+        <input type="radio" id="quinzenasim" onclick="quinzenasim()" value="sim"/> Sim<br />
+        <input type="radio" id="quinzenanao" value="nao"/> Não<br />
+        <input type="button" id="confirmacao" onclick="dados()" value="CONFIRMAR ATENDIMENTO">
+        <h3 id="nomee"></h3>
+        <h3 id="cpff"></h3>
+        <h3 id="cortee"></h3>
+        <h3 id="cortebarbaa"></h3>
+        <h3 id="barbaa"></h3>
+        <h3 id="dataa"></h3>
+        <h3 id="quinzenaa"></h3>
+        <h3 id="valorcc"></h3>
+        <h3 id="valorcb"></h3>
+        <h3 id="valorbb"></h3>
+        <h3 id="valordescc"></h3>
+        <h3 id="valordesccc"></h3>
+        <h3 id="valordescccc"></h3>
+        <h3 id="valordesccccc"></h3>
+    <script src="js/script.js"></script>
+</body>
+</html>
